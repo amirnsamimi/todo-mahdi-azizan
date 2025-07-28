@@ -11,7 +11,7 @@ interface IToDoList {
     showTasks: () => Task[];
     filter: (fn: Function) => Task[];
     deleteTask: (id: string) => void;
-    changeStatus: (id: boolean, status: boolean) => void;
+    changeStatus: (id: number, status: boolean) => void;
     search: (text: string) => Task[];
 }
 
@@ -46,6 +46,8 @@ class TodoList implements IToDoList{
 
         return deletetask;   
     }
+
+
 
     changeStatus(id: number , status: boolean) : void {
         
